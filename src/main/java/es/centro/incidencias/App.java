@@ -4,9 +4,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Punto de entrada a la aplicacion de ejemplo
+ *
+ * @author maria.francopernas
+ * @version 1.0
+ */
 
 public final class App {
 
+
+    /**
+     *
+     */
     private App() {
     }
 
