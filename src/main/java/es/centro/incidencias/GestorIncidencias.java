@@ -46,7 +46,7 @@ public final class GestorIncidencias {
     /**
      * Obtine las incidencias que todavian estan abiertas
      *
-     * @returnnueva lista que contiene unicamente incidendias abiertas
+     * @return nueva lista que contiene unicamente incidendias abiertas
      * @see Incidencia#isAbierta()
      */
 
@@ -91,7 +91,10 @@ public final class GestorIncidencias {
      * Busca incidencia por su identificador
      *
      * @param id identificador buscado
-     * @return incidencia encontrada
+     * @return incidencia encontrada o {@code null} si no existe
+     * @deprecated  utiliza {@link #buscarPorId(String)}, que  informa del error
+     *              mediante {@link  IncidenciaNoEncontradaException} en lugar de
+     *              devolver {@code null}
      */
 
     @Deprecated(since = "1.0.0", forRemoval = false)

@@ -6,7 +6,7 @@ import java.util.Locale;
  * Representa una incidencias
  * contiene informacion especifica (id, titulo, prioridad,abierta)
  * @author maria.francopernas
- * @version1.0.0
+ * @version 1.0.0
  **/
 public final class Incidencia {
 
@@ -32,7 +32,7 @@ public final class Incidencia {
      * @param id  Identificador de la incidencia
      * @param titulo Nombre de la incidencia
      * @param prioridad  El tipo nivel que tiene la ìncidencia
-     * @param abierta Indica si la incidencia esta acabada o no
+     * @param abierta Indica true si esta abierta; falsesi esta cerrada
      */
 
     public Incidencia(String id, String titulo, String prioridad, boolean abierta) {
@@ -82,6 +82,7 @@ public final class Incidencia {
      * Obtiene la comparacion con el id y el titulo
      * @param texto una cadena de caracteres que se va a compara
      * @return un boolean true o false que nos dice si coincide o no
+     * @throws NullPointerException si {@code texto} es {@code null}
      */
     public boolean coincideCon(String texto) {
         String criterio = texto.toLowerCase(Locale.ROOT);

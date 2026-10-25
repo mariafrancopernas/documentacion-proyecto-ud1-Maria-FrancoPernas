@@ -7,19 +7,34 @@ import java.util.Scanner;
 /**
  * Punto de entrada a la aplicacion de ejemplo
  *
+ *<p>Si se ejecuta si argumentos , muestra un menu interectivo.Si se
+ * indican argumentos, ejecutan directamente la operación solicitada
+ * ({@code ayuda} ,{@code listar},{@code abiertas},{@code buscar} o
+ * {@code detalle}.</p>
+ *
  * @author maria.francopernas
  * @version 1.0
+ * @see GestorIncidencias
  */
 
 public final class App {
-
-
     /**
-     *
+     *Constructor privado : la clase solo contiene métodos estáticos
+     * y no deben instanciarse.
      */
     private App() {
     }
 
+    /**
+     * Inicia la aplicación.
+     *
+     * <p>Sin argumentos se abre el menu interactivo.Con argumentos, el primero indica
+     * la operación y el resto sus parámentros, por ejemplo
+     * {@code buscar red} o {@code detalle INC-001}</p>
+     *
+     * @param args argumentos de linea de comandos: operación y, si procede,
+     *             texto de búsqueda o identificador
+     */
     public static void main(String[] args) {
         GestorIncidencias gestor = new GestorIncidencias();
 
